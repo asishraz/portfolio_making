@@ -54,7 +54,7 @@ function openBlogModal(platform, url) {
 
   // form reset
   function clearForm() {
-    var form = document.getElementsByName("contact");
-    console.log(form);
-
+    var form = document.getElementsByName("contact")[0];
+    form.reset();
+    
   }
