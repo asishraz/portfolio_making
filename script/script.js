@@ -1,8 +1,3 @@
-// local development only
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
-
 // for navbar readability 
 const header = document.querySelector('.navbar');
 window.onscroll = function() {

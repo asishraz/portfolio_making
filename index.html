@@ -156,7 +156,7 @@
 
                 <div class="col-lg-6">
                     <!-- form fields -->
-                    <form name="contact" method="POST" netlify onsubmit="clearform()">
+                    <form name="contact" method="POST" netlify action="/.netlify/functions/hr_response" onsubmit="clearForm()">
                         <input type="text" name="name" class="form-control form-control-lg" placeholder="Your Lovely Name">
                         <input type="email" name="email" class="form-control mt-3" placeholder="Your cute email">
                         <input type="text" name="subject" class="form-control mt-3" placeholder="Topic/Subject">
@@ -197,7 +197,7 @@
                 <!-- Display other responses -->
 
                 <!-- Simple Form for HR to Fill -->
-                <form name="hr_info" method="POST" action="./netlify/functions/hr_response">
+                <form name="hr_info" method="POST" netlify action="./netlify/functions/hr_response">
                     <label for="fit_for_role">Is the role a fit for your requirements?</label>
                     <input type="checkbox" id="fit_for_role_yes" name="fit_for_role" value="yes"> Yes
                     <input type="checkbox" id="fit_for_role_no" name="fit_for_role" value="no"> No
