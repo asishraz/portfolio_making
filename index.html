@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+    <title>Asish - Web Developer</title>
+</head>
+<body>
+    
+
+    <!-- Other Sections Will Be Added Here -->
+
+    <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
+        <div class="container">
+            <a class="navbar-brand" href="#">Asish</a>
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blogs">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#forum">Forum</a>
+                    </li>
+                </ul>
+                
+            </div>
+
+
+        </div>
+    </nav>
+
+    <!-- main banner -->
+    <section class="bgimage" id="home">
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                <h2 class="hero_title">Hi, Asish here. </h2>
+                <p class="hero_desc">An Experienced Web Developer</p>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section-->
+    <section id="about">
+        <div class="container mt-4 pt-4">
+            <h1 class="text-center">About Me</h1>
+            <div class="row mt-4">
+                <div class="col-lg-4">
+                    <img src="images/my_pic.jpg" class= "imageAboutPage" alt="">
+                </div>
+
+                <div class="col-lg-8">
+                    <p> 
+                        Passionate Engineer with 6+ years of hands-on experience in the IT industry. 
+                        Proven expertise in innovative solutions across diverse sectors. 
+                        Self-motivated, player and a creative individual who is well-versed in technology, 
+                        writing code, and has a strong interest in UI development.
+                        
+                    </p>
+                    <div class="row mt-3">
+                        <div class="col-md-10">
+                            <ul>
+                                <li>Full Name: Asish</li>
+                                <li>Engineer 👨‍🔬 by Degree 📃 and a Web Developer 👨‍💻 by Profession</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- blogs section -->
+    <section id="blogs" class="mt-5">
+        <div class="container">
+            <h1 class="text-center mb-4">My Writing</h1>
+            
+            <!-- Blog Post 1 -->
+            <div class="blog-post" onclick="openBlogModal('medium', 'https://asishraz.medium.com/social-media-buttons-with-cool-animation-34804daa225d')">
+                <img src="images/first_medium_article.jpg" alt="Thumbnail 1">
+                <h2>Article Title 1</h2>
+                <p>Summary of the article...</p>
+                <a href="#" onclick="openBlogModal('medium', 'article-url-1')">Read More</a>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="blog-post" onclick="openBlogModal('medium', 'article-url-2')">
+                <!-- Similar structure as above for each blog post -->
+            </div>
+
+            <!-- Add more blog posts as needed -->
+
+            <!-- Modal Markup -->
+            <div id="blogModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeBlogModal">&times;</span>
+                    <iframe id="blogIframe" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section -->
+    <section id="contact">
+        <div class="container mt-3 contactContent">
+            <h1 class="text-center">Contact Me</h1>
+
+            <div class="row mt-4">
+                <div class="col-lg-6">
+                    <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                    <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
+                        <div id="embed-map-canvas" style="height:100%; width:100%;max-width:100%;">
+                            <iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Rashtrapati+Bhavan,+Rashtrapati+Bhawan,+President's+Estate,+New+Delhi,+Delhi,+India&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                            </iframe>
+                        </div>
+                        <a class="embed-ded-maphtml" href="https://www.bootstrapskins.com/themes" id="inject-map-data">premium bootstrap themes</a>
+                        <style>#embed-map-canvas img.text-marker{max-width:none!important;background:none!important;}img{max-width:none}
+                        </style>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <!-- form fields -->
+                    <form name="contact" netlify>
+                        <input type="text" class="form-control form-control-lg" placeholder="Your Lovely Name">
+                        <input type="email" class="form-control mt-3" placeholder="Your cute email">
+                        <input type="text" class="form-control mt-3" placeholder="Topic/Subject">
+                        <div class="mb-3 mt-3">
+                            <textarea class="form-control" rows="5" id="comment" name="text" placeholder="Reason for contact in detailed way"></textarea>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-success mt-3">Contact Me</button>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="./script/script.js"></script>
+
+</body>
+</html>
