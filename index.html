@@ -45,6 +45,9 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#hr_section">For HR only</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#forum">Forum</a>
                     </li>
                 </ul>
@@ -169,6 +172,45 @@
             </div>
         </div>
     </section>
+
+
+    <!-- hr_section only section -->
+    <section id="hr_section">
+        <div class="container mt-3 contactContent">
+            <h1 class="text-center">HR Information</h1>
+
+            <!-- Display Your Responses -->
+            <div>
+                <p>Total years of experience: 7 years</p>
+                <p>Current Designation: Web Developer</p>
+                <p>Relevant experience in Python: 5 years</p>
+                <p>Relevant experience in Django: 3 years</p>
+                <p>Relevant experience in ReactJS: 3 years</p>
+                <p>Relevant experience in JavaScript: 4 years</p>
+                <p>Notice period: 1 month</p>
+                <p>Holding Any Offer Letter? Not for now</p>
+                <p>Current salary: 18 LPA</p>
+                <p>Expected salary: 24 LPA</p>
+                <p>Preferred location: Remote </p>
+                <p>Immediate joiner: <input type="radio" id="immediate_joiner_yes" name="immediate_joiner" value="yes" checked> Yes
+                    <input type="radio" id="immediate_joiner_no" name="immediate_joiner" value="no"> No</p>
+                <!-- Display other responses -->
+
+                <!-- Simple Form for HR to Fill -->
+                <form name="hr_info" method="POST" action="./netlify/functions/hr_response.js">
+                    <label for="fit_for_role">Is the role a fit for your requirements?</label>
+                    <input type="checkbox" id="fit_for_role_yes" name="fit_for_role" value="yes"> Yes
+                    <input type="checkbox" id="fit_for_role_no" name="fit_for_role" value="no"> No
+
+                    <label for="contact_number">Contact Number:</label>
+                    <input type="text" id="contact_number" name="contact_number" required>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
 
     <script src="./script/script.js"></script>
 

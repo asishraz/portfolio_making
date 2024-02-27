@@ -89,3 +89,12 @@
 .navbarScroll.navbarDark {
     background-color: black;
 }
+
+/* spacing on all sections */
+#about, #blogs, #forum, #contact {
+  margin-top: 4rem;
+  padding-top: 4rem;
+}
+#contact {
+  padding-bottom: 4rem;
+}
