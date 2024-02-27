@@ -51,3 +51,10 @@ function openBlogModal(platform, url) {
     }
   };
   
+
+  // form reset
+  function clearForm() {
+    var form = document.getElementsByName("contact");
+    console.log(form);
+
+  }
