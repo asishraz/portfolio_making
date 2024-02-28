@@ -40,7 +40,7 @@ exports.handler = async function (event, context) {
         sgMail.setApiKey(sendgridApiKey);
         const msg = {
             to: 'iamasish3001@gmail.com',
-            from: 'raz@humblx.com', // Replace with a valid email address
+            from: 'iamasish3001@gmail.com', // Replace with a valid email address
             subject: 'New HR Response',
             text: `New HR Response:\n\n${JSON.stringify(body, null, 2)}`,
             };
