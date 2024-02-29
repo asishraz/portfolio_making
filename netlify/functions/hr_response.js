@@ -6,16 +6,17 @@ if (process.env.NODE_ENV !== 'production') {
   }
 
 const sgMail = require('@sendgrid/mail');
+require('dotenv').config();
 
 exports.handler = async function (event, context) {
     try {
-        if (event.httpMethod !== 'POST') {
-            return {
-              statusCode: 405, // Method Not Allowed
-              body: JSON.stringify({ error: 'Method Not Allowed' }),
-            };
-          }
-        console.log('Function started'); // Log when the function starts
+        // if (event.httpMethod !== 'POST') {
+        //     return {
+        //       statusCode: 405, // Method Not Allowed
+        //       body: JSON.stringify({ error: 'Method Not Allowed' }),
+        //     };
+        //   }
+        // console.log('Function started'); // Log when the function starts
         const body = JSON.parse(event.body); // Parse form data
         console.log('Received body:', body); // Log the received body
     
